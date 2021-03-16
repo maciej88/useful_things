@@ -4,7 +4,7 @@ test_list = ['czlowiek', 'Arkansas', 'Kuba', 'Kaka']
 print(f"Oryginalna lista: {str(test_list)}")
 
 #initializing K
-K = 3
+K = int(input("Podaj ilość liter: "))
 #map & lambda
 # remove front k elements in str list
 resoults = list(map(lambda i: i [K :], test_list))
