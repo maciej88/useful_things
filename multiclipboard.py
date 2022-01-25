@@ -42,7 +42,8 @@ if len(sys.argv) == 2:
     elif command == "delete":
         key = input("Enter a key: ")
         if key in data:
-            del data[key]
+            data.pop(key[, default])
+            # del data[key]
             print("Key delete")
     else:
         print("Unknown command")
