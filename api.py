@@ -9,6 +9,7 @@ response = requests.get(request_url)
 
 if response.status_code == 200:
     data = response.json()
+    print(data) #shows what you get in data/ qs
     weather = data['weather'][0]['description']
     temperature = round(data["main"]["temp"] - 273.15, 2)
 
