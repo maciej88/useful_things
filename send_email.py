@@ -8,11 +8,23 @@ sender_email = "zzz@email.com"
 receiver_email = "xxx@email.com"
 password = input("enter a password: ")
 
+
 message = EmailMessage()
 message["From"] = sender_email
 message["To"] = receiver_email
 message["Subject"] = subject
 message.set_content(body)
+
+html = f"""
+<html>
+    <body>
+        <h1>{subject}</h1>
+        <p>{body}</p>
+    </body>
+</html>
+"""
+
+message.add_alternative(html, subtype="html")
 
 context = ssl.create_default_context()
 
