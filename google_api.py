@@ -6,15 +6,16 @@ book = input("Name book: ")
 request_url = f"{BASE_URL}{book}"
 response = requests.get(request_url)
 
-if response.status_code == 200:
+if response.status_code != 200:
+    print("error")
+
+else:
     data = response.json()
     for item in data['items']:
 
         if 'pageCount' in item['volumeInfo']:
             page_count = item['volumeInfo']['pageCount']
             print(page_count)
-else:
-    print("error")
 
 
 # class GetBookData:
