@@ -8,7 +8,11 @@ response = requests.get(request_url)
 
 if response.status_code == 200:
     data = response.json()
-    print(data)
+    for item in data['items']:
+
+        if 'pageCount' in item['volumeInfo']:
+            page_count = item['volumeInfo']['pageCount']
+            print(page_count)
 else:
     print("error")
 
