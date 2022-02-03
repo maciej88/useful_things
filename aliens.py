@@ -7,7 +7,7 @@ aliens = [alien0, alien1, alien2]
 for alien in aliens:
     print(alien)
 
-aliens =[]
+aliens = []
 
 for alien in range(30):
     new_alien = {'color': 'zielony', 'points': 5, 'speed': 'wolno'}
