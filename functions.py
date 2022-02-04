@@ -4,5 +4,5 @@ def build_person(first_name, last_name):
 
 name = input('podaj imie: ')
 surname = input('podaj nazwisko: ')
-musican = build_person(name, surname)
-print(musican)
+
+print(build_person(name, surname))
