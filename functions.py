@@ -1,6 +1,8 @@
 def build_person(first_name, last_name):
-    full_name = first_name + ' ' + last_name
-    return full_name.title()
+    full_name = f"imię: {first_name.title()} nazwisko: {last_name.title()}"
+    return full_name
 
-musican = build_person('jimi', 'hendrix')
+name = input('podaj imie: ')
+surname = input('podaj nazwisko: ')
+musican = build_person(name, surname)
 print(musican)
