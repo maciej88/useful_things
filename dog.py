@@ -18,3 +18,6 @@ class Dog():
 my_dog = Dog('wooli', 6)
 
 print(f"Mój pies ma na imię: {my_dog.name.title()}.")
+
+my_dog.sit()
+my_dog.roll_over()
