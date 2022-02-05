@@ -14,3 +14,7 @@ class Dog():
     def roll_over(self):
         """symulacja tzania sie psa"""
         print(f"{self.name.title()} terez kula sie")
+
+my_dog = Dog('wooli', 6)
+
+print(f"Mój pies ma na imię: {my_dog.name.title()}.")
