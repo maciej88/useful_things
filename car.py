@@ -19,6 +19,10 @@ class Car():
         """add value to odometer"""
         self.odometer_reading = milage
 
+    def increment_odometer(self, kilometers):
+        """incrementation"""
+        self.odometer_reading += kilometers
+
 my_new_car = Car('audi', 'a4', 2016)
 print(my_new_car.get_descriptive_name())
 my_new_car.read_odometer()
@@ -28,3 +32,12 @@ my_new_car.read_odometer()
 
 my_new_car.update_odometer(23) #modification with metod
 my_new_car.read_odometer()
+
+my_used_car = Car('subaru', 'outback', 2013)
+print(my_used_car.get_descriptive_name())
+
+my_used_car.update_odometer(2000000)
+my_used_car.read_odometer()
+
+my_used_car.increment_odometer(10000)
+my_used_car.read_odometer()
