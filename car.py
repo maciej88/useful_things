@@ -46,29 +46,25 @@ class ElectricCar(Car):
         self.battery = Battery()
 
 
-    def fill_gas_tank():
+    def fill_gas_tank(self):
         print("No fuel needed!")
 
-my_new_car = Car('audi', 'a4', 2016)
-print(my_new_car.get_descriptive_name())
-my_new_car.read_odometer()
+if __name__ == "__main__":
+    my_new_car = Car('audi', 'a4', 2016)
+    print(my_new_car.get_descriptive_name())
+    my_new_car.read_odometer()
 
-my_new_car.odometer_reading = 23 #modification with no metod
-my_new_car.read_odometer()
+    my_new_car.odometer_reading = 23 #modification with no metod
+    my_new_car.read_odometer()
 
-my_new_car.update_odometer(23) #modification with metod
-my_new_car.read_odometer()
+    my_new_car.update_odometer(23) #modification with metod
+    my_new_car.read_odometer()
 
-my_used_car = Car('subaru', 'outback', 2013)
-print(my_used_car.get_descriptive_name())
+    my_used_car = Car('subaru', 'outback', 2013)
+    print(my_used_car.get_descriptive_name())
 
-my_used_car.update_odometer(2000000)
-my_used_car.read_odometer()
+    my_used_car.update_odometer(2000000)
+    my_used_car.read_odometer()
 
-my_used_car.increment_odometer(10000)
-my_used_car.read_odometer()
-
-my_tesla = ElectricCar('tesla', 'model s', 2020)
-print(my_tesla.get_descriptive_name())
-my_tesla.battery.describe_battery()
-my_tesla.battery.get_range()
+    my_used_car.increment_odometer(10000)
+    my_used_car.read_odometer()
