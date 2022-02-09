@@ -1,9 +1,13 @@
-names = ['Witold', 'Franek', 'Robert']
-print(names[-1])
-print(names[0])
-print(names[1])
+from name_function import get_formatted_name
 
-name = names[-1]
+print("type q for exit")
+while True:
+    first = input("\nPodaj imię: ")
+    if first == 'q':
+        break
+    last = input("Podaj nazwisko: ")
+    if last == 'q':
+        break
 
-message = f"Elo {name}!"
-print(message)
+    formatted_name = get_formatted_name(first, last)
+    print(f"\tSformatowane: {formatted_name}")
